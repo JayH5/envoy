@@ -1,5 +1,6 @@
 FROM ubuntu:16.04
 
+# Install ca-certificates so that Envoy can validate TLS certificates on the web
 RUN apt-get update \
     && apt-get install -y --no-install-recommends ca-certificates \
     && rm -rf /var/lib/apt/lists/*
